@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mac Converter</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <!-- <link rel="stylesheet" href="./dist/css/select2.min.css"> -->
+  <link rel="stylesheet" href="./css/vertercss.css">
+  <link rel="stylesheet" href="./css/vertermenu.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <header style="	width:100%;height: 90px;background: #2B3033;">
+    <div class="imgd" style="margin-right: auto;text-align: center;">
+      <img src="./img/logo.png" alt="">
+    </div>
+
+  </header>
+  <nav class="nav">
+    <div class="burger">
+      <div class="burger__patty"></div>
+    </div>
+
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#1" class="nav__link yellowb"><i class="fa fa-home"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#2" class="nav__link yellowb scrolly"><i class="fa fa-exchange"></i></a>
+
+      </li>
+      <li class="nav__item">
+        <a href="#3" class="nav__link yellowb"><i class="fa fa-globe"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#4" class="nav__link yellowb"><i class="fa fa-line-chart"></i></a>
+      </li>
+      <li class="nav__item">
+        <a href="#5" class="nav__link yellowb"><i class="fa fa-money"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/danielgindi-jquery-backstretch/2.1.15/jquery.backstretch.min.js"></script>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="./img/a.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <section class="panel home" id="1">
+
+    <article class="panel__wrapper">
+      <div class="panel__content">
+        <button class="b-yellowb">
+          <h1 class="panel__headline" style="text-align: center;">
+
+            <a href="#2"><i class="fa fa-exchange"></i>&nbsp;CONVERT CURRENCY</a>
+          </h1>
+        </button>
+
+
+
+      </div>
+    </article>
+  </section>
+
+  <section class="panel " id="2">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+
+
+        <div class="formst">
+
+          <form action="" id="convert" onsubmit="convert(event)">
+
+            <legend style="text-align:center;padding-top:1%;">
+            </legend>
+            <h3><i class="fa fa-exchange"></i>&nbsp;CONVERT AFRICAN CURRENCY</h3>
+            <div class="panel__block"></div>
+
+            <input type="number" id="amount" placeholder="amount" required>
+
+            <select name="" id="from" required>
+                <option value="" disabled selected>-- Select African Currency --</option>
+
+            </select>
+
+            <span id="space_span"> </span>
+            <select name="" id="to" required>
+                <option value="" disabled selected>-- Select African Currency --</option>
+            </select>
+
+            <!-- <button type="button"> CONVERT </button>
+          <input type="number" readonly /> -->
+            <button type="submit">CONVERT</button>
+            <input type="text" id="result" readonly>
+
+
+          </form>
+
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="panel " id="3">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+
+        <div class="formst">
+
+
+          <form action="" id="pconvert" onsubmit="convert(event)">
+
+            <legend style="text-align:center;padding-top:1%;">
+            </legend>
+            <h3><i class="fa fa-globe"></i>&nbsp;CONVERT POPULAR CURRENCY</h3>
+            <div class="panel__block"></div>
+
+
+            <input type="number" id="pamount" placeholder="amount" required>
+
+            <select name="" id="pfrom" required>
+              <option value="" disabled selected>-- Select Popular Currency --</option>
+              <option value="CAD">Canada Canadian Dollar </option>
+              <option value="CNY">China Chinese Renminbi </option>
+              <option value="EUR">France European Euro </option>
+              <option value="INR">India Indian Rupee</option>
+              <option value="JPY">Japan Japanese yen</option>
+              <option value="NZD"> New Zealand Dollar</option>
+              <option value="PKR"> Pakistan Pakistani Rupee </option>
+              <option value="AED"> United Arab Emirates Dirham</option>
+              <option value="GBP">United Kingdom British Pound </option>
+              <option value="USD"> United States of America US Dollar</option>
+
+
+            </select>
+
+            <span id="space_span"> </span>
+
+            <select name="" id="pto" required>
+                <option value="" disabled selected>-- Select Popular Currency --</option>
+                <option value="CAD">Canada Canadian Dollar </option>
+                <option value="CNY">China Chinese Renminbi </option>
+                <option value="EUR">France European Euro </option>
+                <option value="INR">India Indian Rupee</option>
+                <option value="JPY">Japan Japanese yen</option>
+                <option value="NZD"> New Zealand Dollar</option>
+                <option value="PKR"> Pakistan Pakistani Rupee </option>
+                <option value="AED"> United Arab Emirates Dirham</option>
+                <option value="GBP">United Kingdom British Pound </option>
+                <option value="USD"> United States of America US Dollar</option>
+
+            </select>
+
+          
+            <button type="submit">CONVERT</button>
+            
+            <input type="text" placeholder="Converted Currency Display" id="presult" readonly>
+
+          </form>
+
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="panel " id="4">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+
+
+        <div class="formst">
+
+          <form action="" id="rate" onsubmit="rate(event)">
+
+            <legend style="text-align:center;padding-top:1%;">
+            </legend>
+            <h3><i class="fa fa-dollar"></i>&nbsp;EXCHANGE RATES TO DOLLAR</h3>
+            <div class="panel__block"></div>
+
+            <select name=""  id="ex" required>
+                <option value="" disabled selected>-- Select African Currency --</option>
+            </select>
+
+            <button type="submit">Go</button>
+            <input type="text" id="exresult" readonly>
+
+
+          </form>
+
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="panel " id="5">
+    <article class="panel__wrapper">
+      <div class="panel__content">
+
+        <div class="formst">
+
+          <form action="" id="cur" onsubmit="getCountry(event)">
+
+            <legend style="text-align:center;padding-top:1%;">
+            </legend>
+            <h3><i class="fa fa-money"></i>&nbsp;AFRICAN CURRENCY INFORMATION</h3>
+            <div class="panel__block"></div>
+
+
+            <select name="" id="curr" required>
+                <option value="" disabled selected>-- Select African Currency --</option>
+
+            </select>
+
+
+            <!-- <input type="text" id="ccountry"  readonly> -->
+            <label style="display: block;" for="cname">Currency Name</label>
+            <input type="text" id="cname" readonly>
+            <label for="ccode">Currency Code</label>
+            <input type="text" id="ccode" readonly>
+            <label for="csymbol">Currency Symbol</label>
+            <input type="text" id="csymbol" readonly>
+            <button type="submit">Go</button>
+          </form>
+
+
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- <section class="panel mslide" id="6">
+      <article class="panel__wrapper">
+        <div class="panel__content">
+  
+          
+        </div>
+      </article>
+    </section> -->
+  <!-- <script>
+    $('.mslide').backstretch([
+    "./img/maclogo.jpg",
+    "./img/naira.jpg",
+    "./img/egypt.jpg" 
+    ], {
+      fade: 750,
+      duration: 4000,
+      transitionDuration: 5000
+    });
+  </script> -->
+  <a href="#1" class="logo" >
+    <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" />
+  </a>
+ 
+  <script src="./js/script.js"></script>
+  <script src="./js/currency.js"></script>
+  <script>getCountries()</script>
+</body>
+
+</html>
